@@ -1,0 +1,65 @@
+$theme: '.ace.todos-three';
+
+body { 
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+/* Fix for Chrome bug on accelerated panes */
+.sc-pane { 
+  -webkit-transform: none;
+}
+
+$theme.sc-text-field-view { 
+  font-size: 14px;
+  .hint {
+    font-size: 14px;
+    line-height: 30px;
+  }
+ 
+  .padding { 
+    left: 14px;
+  }
+}
+
+$theme.toolbar {
+  .checkbox {
+    .button {
+      left: 13px;
+      top: 50%;
+      margin-top: -8px;
+    }
+ 
+    .label {
+      left: 47px;
+      line-height: 36px;
+    }
+  }
+ 
+  .sc-label-view {
+    text-align: right;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 12px;
+  }
+}
+
+$theme.todo-item {
+  .button {
+    left: 13px;
+    top: 50%;
+    margin-top: -8px;
+  }
+
+  .label {
+    left: 47px;
+    line-height: 36px;
+  }
+
+  &.sel {
+    background-color: white;
+    color: #AAA;
+    text-decoration: line-through;
+  }
+}
