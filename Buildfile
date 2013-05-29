@@ -1,6 +1,5 @@
 # ==========================================================================
-# Project:   GettingStarted
-# Copyright: @2012 My Company, Inc.
+# Project:   Todomvc example app
 # ==========================================================================
 
 # This is your Buildfile, which sets build settings for your project.

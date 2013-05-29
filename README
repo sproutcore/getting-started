@@ -1,6 +1,6 @@
 ==========================================================================
-Project:   GettingStarted
-Copyright: @2012 My Company, Inc.
+Project:   Todomvc Example
 ==========================================================================
 
-TODO: Describe Your Project
+This example is modified from the SproutCore Getting Started Guides, from
+the TodosThree example app.
