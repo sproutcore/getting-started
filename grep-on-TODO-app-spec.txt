@@ -3,7 +3,7 @@ General
 
 When there are no todos, #main and #footer should be hidden.
 
-TODO -- General -- Almost done, but there should be a little spacing above the input when it exists by itself.
+TODO -- General -- Almost done for hiding #main and #footer, but there should be a little spacing above the input when it exists by itself. Do these references to #main and #footer need to be in the html as anchors, or are these just references?
 ----------
 
 
@@ -12,7 +12,7 @@ Readme
 
 All examples should include a short README describing the framework, the general implementation and the build process if required.
 
-TODO -- Readme -- Write it when dust settles. There is a confusing mention in the discussion of bower, about not including the readme, but this must pertain to the use of bower, which we don't do.
+TODO -- Readme -- Write it when dust settles. If fixtures is not used in the todomvc rendition of SproutCore todos, take note. And also, link to SproutCore's Getting-Started guides and the todos app there.
 ---------
 
 
@@ -62,7 +62,7 @@ js/
     └── todo.js
 Keep in mind that framework best practices on how to structure your app comes first.
 
-NOT APPLICABLE (Use SproutCore's best practices, which is already similar.)
+NOT APPLICABLE (Use SproutCore's best practices for app structure, which is already similar to todomvc.)
 TODO -- Structure -- The bower_components directory contains base.css, base.js, bg.png. Do we need to use these?
 TODO -- Structure -- In the template, an app.css overrides bower_components/base.css. Worry about?
 ----------
@@ -85,7 +85,8 @@ Use double-quotes in HTML and single-quotes in JS and CSS.
 Use bower components for your third-party dependencies and manually remove files that aren't required for your app to run.
 Use a constant instead of the keyCode directly: var ENTER_KEY = 13;
 
-DONE
+DONE -- Code Style -- Edited files for using tabs. Fixed use of double vs.
+single quotes. We are assuming here that we will not use bower at all. SproutCore uses constants internally.
 ----------
 
 
@@ -114,7 +115,7 @@ Persistence
 
 Your app should dynamically persist the todos to localStorage. If the framework has capabilities for persisting data (i.e. Backbone.sync), use that, otherwise vanilla localStorage. If possible, use the keys id, title, completed for each item. Make sure to use this format for the localStorage name: todos-[framework]. Editing mode should not be persisted.
 
-TODO -- Persistence -- Use SproutCore's local storage. Instead of fixtures, or ok to load from fixtures, then save to local storage?
+TODO -- Persistence -- Use SproutCore's local storage. Is it important to showcase SproutCore's fixtures, with example todos loaded initially? Or, just remove fixtures altogether and initial app load has no todos?
 ----------
 
 
@@ -123,7 +124,7 @@ Routing
 
 Routing is required for all frameworks. Use the built-in capabilities if supported, otherwise use the Flatiron Director routing library located in the /assets folder. The following routes should be implemented: #/ (all - default), #/active and #/completed (#!/ is also allowed). When the route changes the todo list should be filtered on a model level and the selected class on the filter links should be toggled. When an item is updated while in a filtered state, it should be updated accordingly. E.g. if the filter is Active and the item is checked, it should be hidden. Make sure the active filter is persisted on reload.
 
-TODO -- Routing -- Use SproutCore's routing.
+TODO -- Routing -- Use SproutCore's routing for #/, #/active, #/completed, and do required filtering and displays.
 ----------
 
 
@@ -166,7 +167,7 @@ Editing
 
 When editing mode is activated it will hide the other controls and bring forward an input that contains the todo title, which should be focused (.focus()). The edit should be saved on both blur and enter, and the editing class should be removed. Make sure to .trim() the input and then check that it's not empty. If it's empty the todo should instead be destroyed. If escape is pressed during the edit, the edit state should be left and any changes be discarded.
 
-TODO -- Editing -- The new editing state should hide other controls, destroy if empty input, discard on escape. Find out about blur vs. enter.
+TODO -- Editing -- The new editing state (to be added for a separate todo) should hide other controls, destroy if empty input, discard on escape. Find out about blur vs. enter.
 ----------
 
 
