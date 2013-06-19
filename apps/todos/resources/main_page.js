@@ -87,7 +87,7 @@ Todos.mainPage = SC.Page.design({
 					mouseEntered: function() {
 						this.set('isHovering', YES);
 					},
-					mouseExite: function() {
+					mouseExited: function() {
 						this.set('isHovering', NO);
 					}
 				})
@@ -104,7 +104,7 @@ Todos.mainPage = SC.Page.design({
 			clearCompletedTodos: SC.ButtonView.design(SC.AutoResize, {
 				controlSize: SC.HUGE_CONTROL_SIZE,
 				layout: { centerY: 0, height: 30, right: 12, zIndex: 100 },
-				isEnabledBinding: SC.Binding.oneWay('Todos.completedTodosController.length').bool(),
+				isVisibleBinding: SC.Binding.oneWay('Todos.completedTodosController.length').bool(),
 				title: 'Clear completed todos',
 				action: 'clearCompletedTodos'
 			})
