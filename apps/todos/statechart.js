@@ -3,7 +3,7 @@ Todos.statechart = SC.Statechart.create({
 	trace: YES,
  
 	rootState: SC.State.design({
-		initialSubstate: "READY",
+		initialSubstate: 'READY',
  
 		READY: SC.State.plugin('Todos.READY'),
 			

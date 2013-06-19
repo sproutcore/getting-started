@@ -82,14 +82,14 @@ Todos.mainPage = SC.Page.design({
 					classNames: ['todo-item'],
 					valueBinding: '.content.isCompleted',
 					titleBinding: SC.Binding.oneWay('.content.title'),
-                    isHovering: NO,
-                    displayProperties: 'isHovering'.w(),
-                    mouseEntered: function() {
-                        this.set('isHovering', YES);
-                    },
-                    mouseExite: function() {
-                        this.set('isHovering', NO);
-                    }
+					isHovering: NO,
+					displayProperties: 'isHovering'.w(),
+					mouseEntered: function() {
+						this.set('isHovering', YES);
+					},
+					mouseExite: function() {
+						this.set('isHovering', NO);
+					}
 				})
 			})
 		}),
