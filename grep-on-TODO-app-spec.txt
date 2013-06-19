@@ -30,7 +30,7 @@ Compatibility
 
 We require apps to work in every browser we support.
 
-TODO -- Compatibility -- Check the list of required browsers to support, and ask devs.
+TODO -- Compatibility -- Check the list of required browsers to support. Does SC offer required browser support?
 ----------
 
 
@@ -63,8 +63,7 @@ js/
 Keep in mind that framework best practices on how to structure your app comes first.
 
 NOT APPLICABLE (Use SproutCore's best practices for app structure, which is already similar to todomvc.)
-TODO -- Structure -- The bower_components directory contains base.css, base.js, bg.png. Do we need to use these?
-TODO -- Structure -- In the template, an app.css overrides bower_components/base.css. Worry about?
+TODO -- Structure -- The bower_components directory contains base.css, base.js, bg.png. Do we need to use this? Especially for CSS -- do we need to adapt as best we can for use in SproutCore todos?
 ----------
 
 

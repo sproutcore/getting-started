@@ -4,3 +4,6 @@ Project:   Todomvc Example
 
 This example is modified from the SproutCore Getting Started Guides, from
 the TodosThree example app.
+
+For issues on github, the first part, e.g. "Routing --" refers to the
+specific section in https://github.com/tastejs/todomvc/wiki/App-Specification.
