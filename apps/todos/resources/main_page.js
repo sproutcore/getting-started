@@ -87,7 +87,7 @@ Todos.mainPage = SC.Page.design({
 				useStaticLayout: YES,
 				classNames: ['todos-autoflow-view'],
 				valueBinding: SC.Binding.oneWay('Todos.completedTodosController.activeTodosCount').transform(function(count) {
-					return count === 1 ? 'item' : 'items';
+					return count === 1 ? 'item left' : 'items left';
 				})
 
 			}),
