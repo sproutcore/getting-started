@@ -4,8 +4,11 @@ Todos = SC.Application.create(
 	NAMESPACE: 'Todos',
 	VERSION: '0.1.0',
  
-	store: SC.Store.create().from(SC.FixturesDataSource.create({
-		simulateRemoteResponse: YES,
-		latency: 250
-	}))
+	/** Create initial user defaults */
+	userDefaults: SC.UserDefaults.create({ appDomain: "UserDefaults" }),
+
+    store: SC.Store.create().from(SC.FixturesDataSource.create({
+        simulateRemoteResponse: YES,
+        latency: 250
+    }))
 });
