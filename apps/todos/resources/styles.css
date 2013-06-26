@@ -63,3 +63,10 @@ $theme.todo-item {
 		text-decoration: line-through;
 	}
 }
+
+$theme.todos-autoflow-view {
+	display: inline-block;
+	&h1 {
+		padding-left: 12px;
+	}
+}

@@ -69,33 +69,29 @@ Todos.mainPage = SC.Page.design({
 		footer: SC.ToolbarView.design({
 			layout: { centerX: 0, width: 500, bottom: 0, height: 36 },
 
-			childViews: ['activeLabel', 'filters', 'clearCompletedTodos'],
+			childViews: ['activeCountView', 'activeCountLabelView', 'filters', 'clearCompletedTodos'],
 
 			isVisibleBinding: SC.Binding.from('Todos.todosController.length').bool(),
 
 			// TODO: activeLabel needs styling, so that the number is in bold, but
 			// not the rest of the label. The todomvc CSS has it. (h1 styling).
-			
-			activeLabel: SC.LabelView.design({
-				layout: { centerY: 0, height: 30, width: 100, left: 12, zIndex: 100 },
 
-				totalTodosBinding: SC.Binding.oneWay('Todos.todosController.length'),
-				completedTodosBinding: SC.Binding.oneWay('Todos.completedTodosController.length'),
-
-				value: function() {
-					var active, items_word;
-
-					active = this.get('totalTodos') - this.get('completedTodos');
-
-					if (active == 1) {
-						items_word = 'item';
-					} else {
-						items_word = 'items';
-					}
-					return '' + active + ' ' + items_word + ' left';
-				}.property('totalTodos', 'completedTodos').cacheable()
+			activeCountView: SC.LabelView.design({
+				useStaticLayout: YES,
+				classNames: ['todos-autoflow-view'],
+				tagName: 'h1',
+				valueBinding: SC.Binding.oneWay('Todos.completedTodosController.activeTodosCount')
 			}),
 
+			activeCountLabelView: SC.LabelView.design({
+				useStaticLayout: YES,
+				classNames: ['todos-autoflow-view'],
+				valueBinding: SC.Binding.oneWay('Todos.completedTodosController.activeTodosCount').transform(function(count) {
+					return count === 1 ? 'item' : 'items';
+				})
+
+			}),
+			
 			filters: SC.SegmentedView.extend({
 				layout: { width: 190, height: 30, centerX: 0, centerY: 0 },
 				items: ['All', 'Active', 'Completed'],
