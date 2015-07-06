@@ -1,5 +1,6 @@
 {
   "name": "getting-started",
+  "repository": "https://github.com/sproutcore/getting-started",
   "version": "0.5.0",
   "dependencies": {
     "sproutcore": "git://github.com/sproutcore/build-tools"
