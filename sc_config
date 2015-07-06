@@ -1,0 +1,18 @@
+var todosOne = BT.AppBuilder.create({
+  name: 'todos_one',
+  path: 'apps/todos_one',
+  title: 'Todos One'
+});
+
+var todosTwo = BT.AppBuilder.create({
+  name: 'todos_two',
+  path: 'apps/todos_two',
+  title: 'Todos Two'
+});
+
+var todosThree = BT.AppBuilder.create({
+  name: 'todos_three',
+  path: 'apps/todos_three',
+  //theme: 'sproutcore:legacy_theme',
+  title: 'Todos Three'
+});
