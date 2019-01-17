@@ -1,18 +1,71 @@
-var todosOne = BT.AppBuilder.create({
-  name: 'todos_one',
-  path: 'apps/todos_one',
-  title: 'Todos One'
-});
+sc_require('apps/TodosOne/sc_config');
+sc_require('apps/TodosTwo/sc_config');
+sc_require('apps/TodosThree/sc_config');
 
-var todosTwo = BT.AppBuilder.create({
-  name: 'todos_two',
-  path: 'apps/todos_two',
-  title: 'Todos Two'
-});
+/*
+Please don't remove the following server configuration, as the build tools use it to
+determine the root of your project.
+ */
 
-var todosThree = BT.AppBuilder.create({
-  name: 'todos_three',
-  path: 'apps/todos_three',
-  //theme: 'sproutcore:legacy_theme',
-  title: 'Todos Three'
-});
+BT.serverConfig = {
+
+  /**
+    The port on which the development server should run
+
+    @property
+    @type Number
+    @default 4020
+  */
+  port: 4020,
+
+  /**
+    Set it to false to allow access from the network.
+
+    @property
+    @type Boolean
+    @default true
+  */
+  localOnly: false,
+
+  /**
+    A JSON file to use to store build numbers.
+    You must define this property to enable build number support.
+
+    Example:
+
+        buildNumberPath: 'build_number.json',
+
+    @property
+    @type String
+    @default null
+  */
+  buildNumberPath: null,
+
+  /**
+    Define this property if you need one or more proxies.
+    If you do a request from your app (file or XHR) which doesn't match anything the BT provide,
+    the request will be run past the proxies in the order you define them here.
+    You can use the prefix to filter which requests will be forwarded to where.
+    In the proxied request the prefix you define will be replaced by the proxyPrefix.
+    The example shows how to set up a catch-all proxy, in this case to CouchDB.
+    You can set as many proxies as you want, as long as they don't share a prefix.
+
+    Example:
+
+        proxies: [
+          {
+            prefix: '/',   // set a prefix here for the development server
+            host: 'localhost', // to which host should the request be forwarded
+            port: 5984, // on which port is the host listening?
+            logRequests: false, // show the requests in the terminal?
+            proxyPrefix: '/' // replace the prefix set above with this
+          }
+        ]
+
+    @property
+    @type Array
+    @default null
+  */
+  proxies: null
+
+}

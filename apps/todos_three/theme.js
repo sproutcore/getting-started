@@ -1,4 +1,4 @@
-TodosThree.Theme = SC.AceTheme.create({
+TodosThree.Theme = SC.AkiTheme.create({
   name: 'todos-three'
 });
 

@@ -1,0 +1,8 @@
+var TodosThree = BT.AppBuilder.create({
+  name: 'TodosThree',
+  theme: 'sproutcore:aki',
+  path: dirname(),
+  title: 'TodosThree',
+  frameworks: [],
+  languages: ['en']
+});

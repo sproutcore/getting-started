@@ -1,0 +1,7 @@
+var TodosOne = BT.AppBuilder.create({
+  name: 'TodosOne',
+  path: dirname(),
+  title: 'TodosOne',
+  frameworks: [],
+  languages: ['en']
+});

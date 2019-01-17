@@ -1,13 +1,23 @@
-$theme: '.ace.todos-three';
+$theme: '.aki.todos-three';
 
 body { 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
 }
 
+$theme.sc-main {
+  background: -moz-linear-gradient(top,#ddd,#bbb);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddd), to(#bbb));
+}
+
 /* Fix for Chrome bug on accelerated panes */
 .sc-pane { 
-  -webkit-transform: none;
+  transform: none;
+}
+
+
+$theme.sc-container-view {
+  background: #fff;
 }
 
 $theme.sc-text-field-view { 
@@ -30,7 +40,7 @@ $theme.toolbar {
       margin-top: -8px;
     }
  
-    .label {
+    .sc-button-label {
       left: 47px;
       line-height: 36px;
     }
@@ -52,7 +62,7 @@ $theme.todo-item {
     margin-top: -8px;
   }
 
-  .label {
+  .sc-button-label {
     left: 47px;
     line-height: 36px;
   }
@@ -60,6 +70,9 @@ $theme.todo-item {
   &.sel {
     background-color: white;
     color: #AAA;
-    text-decoration: line-through;
+
+    .sc-button-label {
+      text-decoration: line-through;
+    }
   }
 }

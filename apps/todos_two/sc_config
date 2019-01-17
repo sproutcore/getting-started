@@ -1,0 +1,7 @@
+var TodosTwo = BT.AppBuilder.create({
+  name: 'TodosTwo',
+  path: dirname(),
+  title: 'TodosTwo',
+  frameworks: [],
+  languages: ['en']
+});

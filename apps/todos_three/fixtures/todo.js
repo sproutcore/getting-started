@@ -9,7 +9,7 @@ TodosThree.Todo.FIXTURES = [
  {
    guid: 1,
    isCompleted: YES,
-   title: 'Edit the buildfile'
+   title: 'Edit the sc_config file'
  },
  {
    guid: 2,
